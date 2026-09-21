@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="stylesheet" href="https://googleapis.com/css2?family=Caveat:wght@400..700&display=swap">
+
+
+    <title>Happy holidays!</title>
+
+
+
+    <style>
+.navigation {
+    width: 850px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    color: #4b329f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #17132b, #30204f);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        .page {
+            width: 850px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+	#fake-h1-look {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+	#handwritten {
+        font-family: "Caveat", cursive;
+    }
+
+
+        .header p {
+            color: #c9c3d8;
+            font-size: 16px;
+            line-height: 1.5;
+	    text-align: center;
+        }
+	
+	#click-here-link {
+            color: #ffffff;
+	    text-decoration: none;
+        }
+
+        .warning {
+            background: #3b1f27;
+            border: 1px solid #a94b5d;
+            border-left: 6px solid #e85d75;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .warning strong {
+            color: #ff8094;
+        }
+
+        .card {
+            background: #ffffff;
+            color: #222222;
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .card-intro {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #666666;
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * Fixed width form.
+         * The form will not adapt properly to smaller screens.
+         */
+        .form {
+            width: 780px;
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * Labels and inputs are forced into a rigid two-column layout.
+         * This does not reflow on smaller screens.
+         */
+        .form-row {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            align-items: center;
+            column-gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            text-align: right;
+            color: #333333;
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * There is no obvious :focus styling.
+         */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            height: 44px;
+            padding: 8px 12px;
+            border: 2px solid #dddddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #fafafa;
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * Focus indicator is effectively removed.
+         */
+        input:focus {
+            
+            border-color: #dddddd;
+        }
+
+        .radio-container {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * Very small radio controls and labels.
+         */
+        .radio-option input {
+            width: 13px;
+            height: 13px;
+        }
+
+        .dob-fields {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dob-fields input {
+            width: 70px;
+            text-align: center;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #888888;
+            margin-top: 5px;
+        }
+
+        .submit-row {
+            margin-top: 30px;
+            padding-left: 250px;
+        }
+
+        button {
+	    	
+            border: none;
+            border-radius: 7px;
+            padding: 13px 28px;
+            background: #5b3cc4;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+
+	
+        }
+
+        /*
+         * INTENTIONALLY BAD:
+         *
+         * Poor hover/focus differentiation.
+         */
+        button:hover {
+            background: #5b3cc4;
+        }
+	    button:focus {
+  	    outline: none;
+	    }
+        .issues {
+            margin-top: 30px;
+            background: #f5f3fa;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+	.issues1 {
+            margin-top: 30px;
+            background: #f5f3fa;
+	    color: red;
+            border-radius: 10px;
+            padding: 25px;
+	    display: none;
+        }
+
+
+        .issues h4 {
+            margin-top: 0;
+        }
+
+        .issues ul {
+            margin-bottom: 0;
+            padding-left: 22px;
+            line-height: 1.7;
+            color: #AB96DE;
+        }
+
+        .issues code {
+            background: #e7e3f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #aaa3b9;
+            font-size: 13px;
+            margin-top: 25px;
+        }
+.info-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+#link1:focus-visible {
+    outline: 2px solid #F3DBFF;
+    outline-offset: 2px;
+}
+
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:KIM_GovernmentBody msdt:dt="string">3;#DSIT|9b2b16d8-8f0e-f9f9-8d2e-30d6eeb93788</mso:KIM_GovernmentBody>
+<mso:c6f593ada1854b629148449de059396b msdt:dt="string">DSIT|9b2b16d8-8f0e-f9f9-8d2e-30d6eeb93788</mso:c6f593ada1854b629148449de059396b>
+<mso:m817f42addf14c9a838da36e78800043 msdt:dt="string">GDS|444fcede-209e-4852-86df-859b7c4e54f8</mso:m817f42addf14c9a838da36e78800043>
+<mso:KIM_Activity msdt:dt="string">2;#Office of the Government Chief Digital Officer|dcda0899-a1f3-4fa6-bec0-4bfd3b12b59e</mso:KIM_Activity>
+<mso:h573c97cf80c4aa6b446c5363dc3ac94 msdt:dt="string">Office of the Government Chief Digital Officer|dcda0899-a1f3-4fa6-bec0-4bfd3b12b59e</mso:h573c97cf80c4aa6b446c5363dc3ac94>
+<mso:KIM_Function msdt:dt="string">1;#GDS|444fcede-209e-4852-86df-859b7c4e54f8</mso:KIM_Function>
+<mso:TaxCatchAll msdt:dt="string">3;#DSIT|9b2b16d8-8f0e-f9f9-8d2e-30d6eeb93788;#2;#Office of the Government Chief Digital Officer|dcda0899-a1f3-4fa6-bec0-4bfd3b12b59e;#1;#GDS|444fcede-209e-4852-86df-859b7c4e54f8</mso:TaxCatchAll>
+<mso:_dlc_DocId msdt:dt="string">KJMNRQCUMMN3-1741087513-62274</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">5759a924-b852-4f57-8351-035ff290f619</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://beisgov.sharepoint.com/sites/ServiceTransformation/_layouts/15/DocIdRedir.aspx?ID=KJMNRQCUMMN3-1741087513-62274, KJMNRQCUMMN3-1741087513-62274</mso:_dlc_DocIdUrl>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+<nav class="navigation">
+    <a id="link1" href="#"  onclick="alert('Home link clicked!');">Home</a>
+    <a href="#"  onclick="alert('About link clicked!');" tabindex = 1>About</a>
+    <a href="#" onclick="alert('Services link clicked!');">Services</a>
+    <a href="#" onclick="alert('Product link clicked!');">Products</a>
+    <a href="#"  onclick="alert('Contact link clicked!');" tabindex ="-1">Contact</a>
+    <a href="#" onclick="alert('Info link clicked!');">info</a>
+
+
+</nav>
+    <main class="page">
+
+        <header class="header">
+            <p id="fake-h1-look">Demonstrating Bad Accessibility </p>
+
+
+            <p id="handwritten">
+                This is a deliberately inaccessible page for demonstrating common
+                accessibility problems. </p>
+                <p>Your task is to identify all accessibility issues on the page. Because this is not a hosted web page, automatic accessibility testing tools may not be helpful.
+<a href="#" id="click-here-link" onclick="alert('Click here link clicked!');">Click here </a>to learn more.
+
+            </p>
+        </header>
+
+        <div class="warning">
+            <strong>⚠ Training example:</strong>
+            This form intentionally contains accessibility anti-patterns.
+            Do not use these techniques in a real application.
+        </div>
+
+	<div id="formMessage" class="issues1">
+	</div>
+
+        <section class="card">
+
+            <h2>Create an Account</h2>
+
+            <p class="card-intro">
+                Complete the form below to continue.
+            </p>
+
+            <form class="form" id="myForm">
+
+                <!-- Email -->
+                <div class="form-row">
+
+                    <div class="form-label">
+                        <label for= "email"> Email address </label>
+                    </div>
+
+                    <div>
+                        <input
+			    id = "email"
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Email type -->
+                <div class="form-row">
+
+                    <div class="form-label">
+                        Email type
+                    </div>
+
+                    <div class="radio-container">
+
+                        <div class="radio-option">
+                            <input
+                                type="radio"
+                                name="emailType"
+                                value="personal"
+                                id="personal"
+				checked
+                            >
+                            <label for="personal">Personal</label>
+                        </div>
+
+                        <div class="radio-option">
+                            <input
+                                type="radio"
+                                name="emailType"
+                                value="business"
+                                id="business"
+                            >
+                            <label for="business">Business</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Date of birth -->
+                <div class="form-row">
+
+                    <div class="form-label">
+                       <label for ="day"> Date of birth </label>
+                    </div>
+
+                    <div>
+
+                        <div class="dob-fields">
+
+                            <input
+                                type="text"
+                                name="day"
+				id = "day"
+                                placeholder="DD"
+                                maxlength="2"
+				pattern="(0[1-9]|1[0-2])"
+  				inputmode="numeric"
+                            >
+
+                            <input
+                                type="text"
+                                name="month"
+				id="month"
+                                placeholder="MM"
+                                maxlength="2"
+				pattern="(0[1-9]|1[0-2])"
+  				inputmode="numeric"
+                            >
+
+                            <input
+                                type="text"
+                                name="year"
+				id="year"
+                                placeholder="YYYY"
+                                maxlength="4"
+				inputmode="numeric"
+                            >
+			<img
+        src="info-icon.png"
+	title = "you must be 16 years or older to apply for an account"
+                class="info-icon"
+    >
+
+                        </div>
+
+                        <div class="hint">
+                            DD / MM / YYYY
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-row">
+
+                    <div class="form-label">
+                    <label for ="password">    Password </label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="password"
+                            name="password"
+			    id="password"
+                            placeholder="Enter your password at least 8 characters"
+                        >
+			<div class="hint">
+                            Password must match password policy
+                        </div>
+                    </div>
+			
+
+                </div>
+
+
+                <!-- Submit -->
+                <div class="submit-row">
+
+                    <button type="submit">
+                        Create account
+                    </button>
+
+                </div>
+
+            </form>
+<script> 
+	const form = document.getElementById("myForm");
+	const day = document.getElementById("day");
+	const month = document.getElementById("month");
+	const year = document.getElementById("year");
+
+	//add event listners for the day and month fields
+	day.addEventListener('input', function () {
+    		if (this.value.length === 2) {
+        		month.focus();//if day is two characters move focus to month
+    		}
+	});
+	month.addEventListener('input', function () {
+    		if (this.value.length === 2) {
+        		year.focus();//if month is two characters move focus to year
+    		}
+	});
+
+
+
+	form.addEventListener("submit", function(event) { 
+		event.preventDefault(); 
+		//alert("Form submitted successfully!"); 
+		const fields = this.querySelectorAll("input, textarea, select"); 
+		const message = document.getElementById("formMessage"); 
+		let hasEmptyField = false; 
+		fields.forEach(function (field) { 
+		    if (field.value.trim() === "") { 
+			hasEmptyField = true; 
+			field.style.border = '1px solid red';//highlight such fields with red outline
+		    } 
+	        }); 
+		//alert ("outside " + hasEmptyField);
+		if (hasEmptyField) { 
+		  message.textContent = "Please fill in all fields.";   
+		} else {
+	          message.textContent = "All form fields are filled."; 
+		}
+		message.style.display = "block";//show the div above form
+
+}); 
+</script>
+
+
+
+            <!-- Accessibility teaching notes -->
+            <aside class="issues">
+
+                <h4>Note</h4>
+
+                <ul>
+                    <li>
+                        THIS PAGE IS ONLY FOR DEMONSTRATION PURPOSES.
+                    </li>
+
+                                       
+                   </ul>
+
+            </aside>
+	<div class="tenor-gif-embed" data-postid="12962384956709139796" data-share-method="host" data-aspect-ratio="1.75352" data-width="100%"><a href="https://tenor.com/view/tired-office-sleepy-exhausted-gif-12962384956709139796">Tired Office GIF</a>from <a href="https://tenor.com/search/tired-gifs">Tired GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        </section>
+
+        <div class="footer">
+            Accessibility training demonstration
+        </div>
+
+    </main>
+
+</body>
+</html>
