@@ -58,9 +58,12 @@ No indication of required fields.
 
 ## Form labels 
 
-Currently form labels for email date of birth for day and password is associated with the relevant form input field. You can click on the form label and if it is correctly associated with input field it should take you to the input field. However, this is not always a reliable test because there are different ways of associating form field name with the input. 
+Currently form labels for email, and date of birth for day is associated with the relevant form input field. You can click on the form label and if it is correctly associated with input field it should take you to the input field. However, this is not always a reliable test because there are different ways of associating form field name with the input. 
 
 This issue can be a blocker for screen reader users as they may not understand what each input field is for. For example, in this page date of birth month and date of birth year are not associated with a label. 
+
+## Visual labels for fields
+For the field password there is no visual label.
 
 ## Interaction complexity 
 
